@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/23673491d4.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+
+    <div id="root">
+        <!-- ?MAIN TITLE? -->
+        <h1>TO DO LIST</h1>
+
+        <!-- ?INPUT SIDE? -->
+        <div class="input-side">
+            <!-- ?adding new items to the todo list? -->
+            <input @keyup.enter="addToList()" type="text" v-model="newToDo.newItemText" placeholder="New ToDo">
+            <button @click="addToList()" class="btn todo-add">Add</button>
+        </div>
+
+        <!-- ?LIST SIDE? -->
+        <div v-if="toDos.length > 0" class="to-dos-wrapper">
+            <ul class="to-dos">
+                <li v-for="(element, index) in toDos">
+                    <span class="todo-text" :class="{'todo-done': element.done}">
+                        {{element.text}}
+                    </span>
+                    <span @click="removeFromList(index)" class="cross">
+                        <i class="fa-solid fa-xmark"></i>
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
