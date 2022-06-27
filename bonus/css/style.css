@@ -1,0 +1,77 @@
+/* *RESET* */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+}
+
+/* *COMMON* */
+body {
+    font-family: sans-serif;
+    background-color: #3d3d3d;
+}
+h1 {
+    padding: 1rem 0;
+    font-size: 3rem;
+    text-align: center;
+    color: #ffd52e;
+}
+.btn {
+    padding: 0.8em 2em;
+    border: 1px solid;
+    border-radius: 0.3em;
+    cursor: pointer;
+}
+ul {
+    list-style-type: none;
+}
+
+/* *INPUT SIDE* */
+.input-side {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.input-side > * {
+    vertical-align: middle;
+}
+.input-side input {
+    padding: 0.4em 0.4em;
+    width: 250px;
+    font-size: 0.7rem;
+}
+.btn.todo-add {
+    font-size: 0.6rem;
+    color: white;
+    border-color: #ffd52e;
+    background-color: #ffd52e;
+}
+
+/* *LIST SIDE* */
+.to-dos-wrapper {
+    margin: 0 auto;
+    padding: 1rem 2rem 1.6rem;
+    width: 65%;
+    background-color: #ffd52e;
+}
+.to-dos li {
+    padding: 0.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #3d3d3d;
+}
+.todo-done {
+    text-decoration: line-through 2px crimson;
+}
+span.cross > i {
+    font-size: 1.3rem;
+}
+span.cross:hover {
+    color: crimson;
+    cursor: pointer;
+}
+.todo-text {
+    cursor: pointer;
+}
