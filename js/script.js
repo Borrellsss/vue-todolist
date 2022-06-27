@@ -55,6 +55,10 @@ var app = new Vue(
             ],
         },
         methods: {
+            // *aggiungo un nuovo elemento all'array "newToDo" al "click"*
+            // *o alla presiione del tasto "enter". L'"object" aggiunto avrà*
+            // *come "text" il valore della input in "input-side" e come*
+            // *"done" avrà di default "false"*
             addToList () {
                 this.toDos.push({
                     text: this.newToDo.newItemText,
@@ -62,6 +66,8 @@ var app = new Vue(
                 });
                 this.newToDo.newItemText = "";
             },
+            // *al "click" sulla "X" rimuovo l'elemento dell'array*
+            // *con lo stesso indice della "X" sulla quale si è cliccato*
             removeFromList(todoIndex) {
                 this.toDos.splice(todoIndex, 1);
             }
